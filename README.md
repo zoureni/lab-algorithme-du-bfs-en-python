@@ -1,5 +1,5 @@
-# Intermediate Python Course
+# Algorithme du BFS en Python
 
-Hey there, 
+Salut, 
 
-In this course you will create a dice-rolling program using python. The code you create will be stored in the dice-roller.py file. This repo also contains course materials under the issues tab. 
+Dans ce tutoriel, tu vas créer une recherche arborescente en utilisant l'algorithme de recherche se reposant sur le [BFS](https://en.wikipedia.org/wiki/Breadth-first_search)
