@@ -19,27 +19,26 @@ eleves["Corlings"]=[]
 eleves["Abdelkrim"]=["Souleyman","Zack","Zoureni"]
 eleves["Souleyman"]=[]
 eleves["Zack"]=[]
-
 def personne_elue(name):
-   return name == 'Zoureni'
-   
-from collections import deque
+  return name == 'Zoureni'
 
 def search(name):
-   print( len(eleves.values()) )
-   search_queue = deque()
-   search_queue += eleves[name]
-   print( len(search_queue) )
-   while search_queue:
-      personne = search_queue.popleft()
+  from collections import deque
+  visitees = []
+  search_queue = deque()
+  search_queue += eleves[name]
+  while search_queue:
+    personne = search_queue.popleft()
+    if not personne in visitees:
       if personne_elue(personne):
-         print(personne + " a le fameux Mac")
-         return True
+        print(personne + " a le fameux Mac")
+        return True
       search_queue += eleves[personne]
-   return False
+      visitees.append(personne)
+  return False
 
 if __name__== "__main__":
-   search("Boris")
+  search("Boris")
   
 
 
